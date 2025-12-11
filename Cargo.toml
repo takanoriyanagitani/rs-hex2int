@@ -1,0 +1,80 @@
+[package]
+name = "rs-hex2int"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+
+[dependencies]
+hex = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+
+[[bin]]
+name = "hex2i8"
+path = "src/bin/hex2i8.rs"
+
+[[bin]]
+name = "hex2u8"
+path = "src/bin/hex2u8.rs"
+
+[[bin]]
+name = "hex2i16be"
+path = "src/bin/hex2i16be.rs"
+
+[[bin]]
+name = "hex2i16le"
+path = "src/bin/hex2i16le.rs"
+
+[[bin]]
+name = "hex2u16be"
+path = "src/bin/hex2u16be.rs"
+
+[[bin]]
+name = "hex2u16le"
+path = "src/bin/hex2u16le.rs"
+
+[[bin]]
+name = "hex2i32be"
+path = "src/bin/hex2i32be.rs"
+
+[[bin]]
+name = "hex2i32le"
+path = "src/bin/hex2i32le.rs"
+
+[[bin]]
+name = "hex2u32be"
+path = "src/bin/hex2u32be.rs"
+
+[[bin]]
+name = "hex2u32le"
+path = "src/bin/hex2u32le.rs"
+
+[[bin]]
+name = "hex2i64be"
+path = "src/bin/hex2i64be.rs"
+
+[[bin]]
+name = "hex2i64le"
+path = "src/bin/hex2i64le.rs"
+
+[[bin]]
+name = "hex2u64be"
+path = "src/bin/hex2u64be.rs"
+
+[[bin]]
+name = "hex2u64le"
+path = "src/bin/hex2u64le.rs"
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 'z'
+codegen-units = 1
