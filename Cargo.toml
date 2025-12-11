@@ -3,6 +3,18 @@ name = "rs-hex2int"
 version = "0.1.0"
 edition = "2024"
 
+description = "Converts the hex string to integers."
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-hex2int"
+homepage = "https://github.com/takanoriyanagitani/rs-hex2int"
+documentation = "https://docs.rs/rs-hex2int/latest"
+keywords = ["hex", "integer", "convert", "wasm"]
+categories = ["command-line-utilities"]
+
+exclude = [
+	"examples/",
+]
+
 [lints.rust]
 unsafe_code = "forbid"
 
